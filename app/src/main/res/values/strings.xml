@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TinderLike</string>
+    <string name="sign_Up">Sign Up</string>
+    <string name="sign_In">Sign In</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="log_in">Log In</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="enter_your_phone_number">Enter Your Phone Number</string>
+    <string name="enter_your_age">Enter Your Age</string>
+</resources>
