@@ -1,0 +1,2 @@
+[![CircleCI](https://circleci.com/gh/gshields5541/AD340Assignment3.svg?style=svg)](https://circleci.com/gh/gshields5541/AD340Assignment3)
+[![codecov](https://codecov.io/gh/gshields5541/AD340Assignment3/branch/master/graph/badge.svg)](https://codecov.io/gh/gshields5541/AD340Assignment3)
