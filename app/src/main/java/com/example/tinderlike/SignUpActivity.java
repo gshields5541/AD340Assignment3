@@ -1,6 +1,7 @@
 package com.example.tinderlike;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -44,6 +45,8 @@ public class SignUpActivity extends AppCompatActivity {
                         {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "You have registered successfully", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(SignUpActivity.this, ProfileActivity.class);
+                            startActivity(intent);
                         }
                         else
                         {
