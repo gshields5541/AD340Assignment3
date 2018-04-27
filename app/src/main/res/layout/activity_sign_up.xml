@@ -11,15 +11,14 @@
         android:id="@+id/editText2"
         android:layout_width="358dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="86dp"
-        android:hint="@string/enter_email_address"
-        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
         android:ems="10"
-        android:textColorHint="#FFFFFF"
-        android:inputType="textEmailAddress" />
+        android:hint="@string/enter_email_address"
+        android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
 
     <EditText
         android:id="@+id/editText3"
@@ -38,8 +37,8 @@
         android:layout_width="355dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_marginTop="182dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="145dp"
         android:ems="10"
         android:hint="@string/enter_password"
         android:inputType="textPassword"
@@ -50,13 +49,26 @@
         android:id="@+id/editText5"
         android:layout_width="354dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_centerVertical="true"
-        android:hint="@string/enter_your_age"
-        android:textColor="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="202dp"
         android:ems="10"
-        android:textColorHint="#FFFFFF"
-        android:inputType="" />
+        android:hint="@string/enter_your_age"
+        android:inputType=""
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="354dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText5"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="@string/enter_your_occupation"
+        android:inputType=""
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
 
     <Button
         android:id="@+id/button"
@@ -64,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="183dp"
+        android:layout_marginBottom="163dp"
         android:background="@drawable/myshape"
         android:onClick="register"
         android:text="@string/log_in" />

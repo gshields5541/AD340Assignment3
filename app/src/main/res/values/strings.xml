@@ -10,4 +10,6 @@
     <string name="enter_your_age">Enter Your Age</string>
     <string name="about_me">About Me</string>
     <string name="Description">descrip</string>
+    <string name="enter_your_occupation">Enter Your Occupation</string>
+    <string name="name_and_occupation">TextView</string>
 </resources>
