@@ -54,14 +54,14 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="216dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:textSize="16sp"
-        android:textColor="#FFFF"
+        android:labelFor="@+id/name_and_occupation"
         android:text="@string/name_and_occupation"
-        android:labelFor ="@+id/name_and_occupation"
+        android:textColor="#FFFF"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
