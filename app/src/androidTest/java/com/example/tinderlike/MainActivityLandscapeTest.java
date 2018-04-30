@@ -28,13 +28,13 @@ import static org.hamcrest.Matchers.allOf;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class MainActivityTestLandscape {
+public class MainActivityLandscapeTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void mainActivityTestLandscape() {
+    public void mainActivityLandscapeTest() {
         // Added a sleep statement to match the app's execution delay.
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
@@ -176,31 +176,38 @@ public class MainActivityTestLandscape {
         // Added a sleep statement to match the app's execution delay.
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
-        /*try {
+        try {
             Thread.sleep(300);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        ViewInteraction appCompatEditText11 = onView(
-                allOf(withId(R.id.editText),
+        ViewInteraction tabView = onView(
+                allOf(childAtPosition(
                         childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                1),
+                                withId(R.id.tabLayout_id),
+                                0),
+                        1),
                         isDisplayed()));
-        appCompatEditText11.perform(replaceText("I'm a dreamer and a thinker"), closeSoftKeyboard());
+        tabView.perform(click());
 
-        ViewInteraction appCompatEditText12 = onView(
-                allOf(withId(R.id.editText), withText("I'm a dreamer and a thinker"),
+        ViewInteraction tabView2 = onView(
+                allOf(childAtPosition(
                         childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                1),
+                                withId(R.id.tabLayout_id),
+                                0),
+                        2),
                         isDisplayed()));
-        appCompatEditText12.perform(pressImeActionButton());*/
+        tabView2.perform(click());
+
+        ViewInteraction tabView3 = onView(
+                allOf(childAtPosition(
+                        childAtPosition(
+                                withId(R.id.tabLayout_id),
+                                0),
+                        0),
+                        isDisplayed()));
+        tabView3.perform(click());
 
     }
 

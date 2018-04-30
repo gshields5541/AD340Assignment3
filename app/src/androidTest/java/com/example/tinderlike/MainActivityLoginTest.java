@@ -27,13 +27,13 @@ import static org.hamcrest.Matchers.allOf;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class MainActivityTestLogin {
+public class MainActivityLoginTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void mainActivityTestLogin() {
+    public void mainActivityLoginTest() {
         // Added a sleep statement to match the app's execution delay.
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
@@ -72,6 +72,15 @@ public class MainActivityTestLogin {
                         isDisplayed()));
         appCompatEditText.perform(replaceText("gshieldssea5541@gmail.com"), closeSoftKeyboard());
 
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+        try {
+            Thread.sleep(300);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         ViewInteraction appCompatEditText2 = onView(
                 allOf(withId(R.id.name),
                         childAtPosition(
@@ -80,10 +89,10 @@ public class MainActivityTestLogin {
                                         0),
                                 1),
                         isDisplayed()));
-        appCompatEditText2.perform(replaceText("coolman"), closeSoftKeyboard());
+        appCompatEditText2.perform(replaceText("12345"), closeSoftKeyboard());
 
         ViewInteraction appCompatButton2 = onView(
-                allOf(withId(R.id.button), withText("Log In"),
+                allOf(withId(R.id.button), withText("Sign In"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -91,6 +100,42 @@ public class MainActivityTestLogin {
                                 2),
                         isDisplayed()));
         appCompatButton2.perform(click());
+
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+        try {
+            Thread.sleep(300);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        ViewInteraction tabView = onView(
+                allOf(childAtPosition(
+                        childAtPosition(
+                                withId(R.id.tabLayout_id),
+                                0),
+                        1),
+                        isDisplayed()));
+        tabView.perform(click());
+
+        ViewInteraction tabView2 = onView(
+                allOf(childAtPosition(
+                        childAtPosition(
+                                withId(R.id.tabLayout_id),
+                                0),
+                        2),
+                        isDisplayed()));
+        tabView2.perform(click());
+
+        ViewInteraction tabView3 = onView(
+                allOf(childAtPosition(
+                        childAtPosition(
+                                withId(R.id.tabLayout_id),
+                                0),
+                        0),
+                        isDisplayed()));
+        tabView3.perform(click());
 
     }
 

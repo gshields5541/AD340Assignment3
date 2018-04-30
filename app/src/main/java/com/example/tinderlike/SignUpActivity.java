@@ -23,6 +23,8 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
         dialog = new ProgressDialog(this);
+
+
         e1_mail = findViewById(R.id.email);
         e2_name = findViewById(R.id.name);
         e3_password = findViewById(R.id.password);
@@ -30,43 +32,43 @@ public class SignUpActivity extends AppCompatActivity {
         e5_occupation = findViewById(R.id.occupation);
 
 
-        EditText editEmail = findViewById(R.id.email);
-        String strEmail = editEmail.getText().toString();
+        EditText edit_Email = e1_mail;
+        String str_Email = edit_Email.getText().toString();
 
-        if(TextUtils.isEmpty(strEmail)) {
-            editEmail.setError("Please Enter a Email Address");
+        if(TextUtils.isEmpty(str_Email)) {
+            edit_Email.setError("Please Enter a Email Address");
         }
 
 
-        EditText editName = findViewById(R.id.name);
-        String strName = editName.getText().toString();
+        EditText edit_Name = e2_name;
+        String str_Name = edit_Name.getText().toString();
 
-        if(TextUtils.isEmpty(strName)) {
-            editEmail.setError("Please Enter Your Name");
+        if(TextUtils.isEmpty(str_Name)) {
+            edit_Name.setError("Please Enter Your Name");
         }
 
 
-        EditText editPass = findViewById(R.id.password);
-        String strPass = editPass.getText().toString();
+        EditText edit_Pass = e3_password;
+        String strPass = edit_Pass.getText().toString();
 
         if(TextUtils.isEmpty(strPass)) {
-            editPass.setError("Please Enter a Password");
+            edit_Pass.setError("Please Enter a Password");
         }
 
 
-        EditText editAge = findViewById(R.id.age);
-        String strAge = editAge.getText().toString();
+        EditText edit_Age = e4_age;
+        String str_Age = edit_Age.getText().toString();
 
-        if(TextUtils.isEmpty(strAge)) {
-            editAge.setError("Please Enter your full Age");
+        if(TextUtils.isEmpty(str_Age)) {
+            edit_Age.setError("Please Enter your full Age");
         }
 
 
-        EditText editOccup = findViewById(R.id.occupation);
-        String strOccup = editOccup.getText().toString();
+        EditText edit_Occup = e5_occupation;
+        String str_Occup = edit_Occup.getText().toString();
 
-        if(TextUtils.isEmpty(strOccup)) {
-            editOccup.setError("Please Enter your Occupation");
+        if(TextUtils.isEmpty(str_Occup)) {
+            edit_Occup.setError("Please Enter your Occupation");
         }
     }
 

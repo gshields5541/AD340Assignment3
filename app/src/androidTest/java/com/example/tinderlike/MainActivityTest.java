@@ -70,28 +70,9 @@ public class MainActivityTest {
                                         0),
                                 0),
                         isDisplayed()));
-        appCompatEditText.perform(click());
-
-        // Added a sleep statement to match the app's execution delay.
-        // The recommended way to handle such scenarios is to use Espresso idling resources:
-        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        appCompatEditText.perform(replaceText("gshieldssea5541@gmail.com"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText2 = onView(
-                allOf(withId(R.id.email),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                0),
-                        isDisplayed()));
-        appCompatEditText2.perform(replaceText("swalker@gmail.com"), closeSoftKeyboard());
-
-        ViewInteraction appCompatEditText3 = onView(
                 allOf(withId(R.id.name),
                         childAtPosition(
                                 childAtPosition(
@@ -99,9 +80,9 @@ public class MainActivityTest {
                                         0),
                                 1),
                         isDisplayed()));
-        appCompatEditText3.perform(replaceText("Stephanie Walker"), closeSoftKeyboard());
+        appCompatEditText2.perform(replaceText("Gerald Shields"), closeSoftKeyboard());
 
-        ViewInteraction appCompatEditText4 = onView(
+        ViewInteraction appCompatEditText3 = onView(
                 allOf(withId(R.id.password),
                         childAtPosition(
                                 childAtPosition(
@@ -109,9 +90,9 @@ public class MainActivityTest {
                                         0),
                                 2),
                         isDisplayed()));
-        appCompatEditText4.perform(replaceText("123456"), closeSoftKeyboard());
+        appCompatEditText3.perform(replaceText("12345"), closeSoftKeyboard());
 
-        ViewInteraction appCompatEditText5 = onView(
+        ViewInteraction appCompatEditText4 = onView(
                 allOf(withId(R.id.age),
                         childAtPosition(
                                 childAtPosition(
@@ -119,9 +100,9 @@ public class MainActivityTest {
                                         0),
                                 3),
                         isDisplayed()));
-        appCompatEditText5.perform(replaceText("23"), closeSoftKeyboard());
+        appCompatEditText4.perform(replaceText("50"), closeSoftKeyboard());
 
-        ViewInteraction appCompatEditText6 = onView(
+        ViewInteraction appCompatEditText5 = onView(
                 allOf(withId(R.id.occupation),
                         childAtPosition(
                                 childAtPosition(
@@ -129,7 +110,7 @@ public class MainActivityTest {
                                         0),
                                 4),
                         isDisplayed()));
-        appCompatEditText6.perform(replaceText("Hairdresser"), closeSoftKeyboard());
+        appCompatEditText5.perform(replaceText("Programmer"), closeSoftKeyboard());
 
         ViewInteraction appCompatButton2 = onView(
                 allOf(withId(R.id.button), withText("Log In"),
@@ -144,21 +125,29 @@ public class MainActivityTest {
         // Added a sleep statement to match the app's execution delay.
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
-        /*try {
+        try {
             Thread.sleep(300);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        ViewInteraction appCompatEditText7 = onView(
-                allOf(withId(R.id.editText),
+        ViewInteraction tabView = onView(
+                allOf(childAtPosition(
                         childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                1),
+                                withId(R.id.tabLayout_id),
+                                0),
+                        1),
                         isDisplayed()));
-        appCompatEditText7.perform(replaceText("I'm a thinker and a dreamer"), closeSoftKeyboard());*/
+        tabView.perform(click());
+
+        ViewInteraction tabView2 = onView(
+                allOf(childAtPosition(
+                        childAtPosition(
+                                withId(R.id.tabLayout_id),
+                                0),
+                        2),
+                        isDisplayed()));
+        tabView2.perform(click());
 
     }
 
