@@ -12,4 +12,9 @@
     <string name="Description">descrip</string>
     <string name="enter_your_occupation">Enter Your Occupation</string>
     <string name="name_and_occupation">TextView</string>
+    <string name="tinder_like_logo">tinder-like-logo</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="profile_fragment">Profile Fragment</string>
+    <string name="settings_fragment">Settings Fragment</string>
+    <string name="matches_fragment">Matches Fragment</string>
 </resources>

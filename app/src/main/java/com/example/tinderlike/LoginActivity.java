@@ -1,6 +1,7 @@
 package com.example.tinderlike;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,8 +24,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        e1 = findViewById(R.id.editText2);
-        e2 = findViewById(R.id.editText3);
+        e1 = findViewById(R.id.email);
+        e2 = findViewById(R.id.password);
         dialog = new ProgressDialog(this);
         auth = FirebaseAuth.getInstance();
     }
@@ -42,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful())
                         {
                             Toast.makeText(getApplicationContext(), "You have successfully logged in", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(LoginActivity.this, MultiTabActivity.class);
                             dialog.dismiss();
                         }
                         else

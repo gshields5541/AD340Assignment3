@@ -64,7 +64,7 @@ public class MainActivityTestLandscape {
         }
 
         ViewInteraction appCompatEditText = onView(
-                allOf(withId(R.id.editText2),
+                allOf(withId(R.id.email),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -74,7 +74,7 @@ public class MainActivityTestLandscape {
         appCompatEditText.perform(replaceText("gshieldssea5541@gmail.com"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText2 = onView(
-                allOf(withId(R.id.editText2), withText("gshieldssea5541@gmail.com"),
+                allOf(withId(R.id.email), withText("gshieldssea5541@gmail.com"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -84,7 +84,7 @@ public class MainActivityTestLandscape {
         appCompatEditText2.perform(pressImeActionButton());
 
         ViewInteraction appCompatEditText3 = onView(
-                allOf(withId(R.id.editText3),
+                allOf(withId(R.id.name),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -94,7 +94,7 @@ public class MainActivityTestLandscape {
         appCompatEditText3.perform(replaceText("Gerald Shields"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText4 = onView(
-                allOf(withId(R.id.editText3), withText("Gerald Shields"),
+                allOf(withId(R.id.name), withText("Gerald Shields"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -104,7 +104,7 @@ public class MainActivityTestLandscape {
         appCompatEditText4.perform(pressImeActionButton());
 
         ViewInteraction appCompatEditText5 = onView(
-                allOf(withId(R.id.editText4),
+                allOf(withId(R.id.password),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -114,7 +114,7 @@ public class MainActivityTestLandscape {
         appCompatEditText5.perform(replaceText("12345"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText6 = onView(
-                allOf(withId(R.id.editText4), withText("12345"),
+                allOf(withId(R.id.password), withText("12345"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -124,7 +124,7 @@ public class MainActivityTestLandscape {
         appCompatEditText6.perform(pressImeActionButton());
 
         ViewInteraction appCompatEditText7 = onView(
-                allOf(withId(R.id.editText5),
+                allOf(withId(R.id.age),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -134,7 +134,7 @@ public class MainActivityTestLandscape {
         appCompatEditText7.perform(replaceText("50"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText8 = onView(
-                allOf(withId(R.id.editText5), withText("50"),
+                allOf(withId(R.id.age), withText("50"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -144,7 +144,7 @@ public class MainActivityTestLandscape {
         appCompatEditText8.perform(pressImeActionButton());
 
         ViewInteraction appCompatEditText9 = onView(
-                allOf(withId(R.id.editText6),
+                allOf(withId(R.id.occupation),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -154,7 +154,7 @@ public class MainActivityTestLandscape {
         appCompatEditText9.perform(replaceText("Programmer"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText10 = onView(
-                allOf(withId(R.id.editText6), withText("Programmer"),
+                allOf(withId(R.id.occupation), withText("Programmer"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -176,7 +176,7 @@ public class MainActivityTestLandscape {
         // Added a sleep statement to match the app's execution delay.
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
-        try {
+        /*try {
             Thread.sleep(300);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -200,7 +200,7 @@ public class MainActivityTestLandscape {
                                         0),
                                 1),
                         isDisplayed()));
-        appCompatEditText12.perform(pressImeActionButton());
+        appCompatEditText12.perform(pressImeActionButton());*/
 
     }
 

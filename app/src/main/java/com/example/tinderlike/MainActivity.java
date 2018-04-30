@@ -1,11 +1,17 @@
 package com.example.tinderlike;
 
 import android.content.Intent;
+import android.provider.ContactsContract;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.support.v4.app.Fragment;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

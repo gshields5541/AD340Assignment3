@@ -15,9 +15,9 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="204dp"
-        android:background="@drawable/myshape"
         android:onClick="click_signup"
-        android:text="@string/sign_Up"
+        android:text="@string/sign_up"
+        android:background="@drawable/myshape"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,12 +31,25 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="260dp"
-        android:background="@drawable/myshape"
         android:onClick="click_signin"
         android:text="@string/sign_In"
+        android:background="@drawable/myshape"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.009"
+        app:srcCompat="@drawable/tinlogo" />
 </android.support.constraint.ConstraintLayout>

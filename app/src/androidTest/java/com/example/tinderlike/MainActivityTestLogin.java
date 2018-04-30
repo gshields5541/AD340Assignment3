@@ -63,7 +63,7 @@ public class MainActivityTestLogin {
         }
 
         ViewInteraction appCompatEditText = onView(
-                allOf(withId(R.id.editText2),
+                allOf(withId(R.id.email),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -73,7 +73,7 @@ public class MainActivityTestLogin {
         appCompatEditText.perform(replaceText("gshieldssea5541@gmail.com"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText2 = onView(
-                allOf(withId(R.id.editText3),
+                allOf(withId(R.id.name),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),

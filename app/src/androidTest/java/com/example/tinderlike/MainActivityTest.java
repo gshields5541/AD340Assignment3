@@ -63,7 +63,7 @@ public class MainActivityTest {
         }
 
         ViewInteraction appCompatEditText = onView(
-                allOf(withId(R.id.editText2),
+                allOf(withId(R.id.email),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -82,7 +82,7 @@ public class MainActivityTest {
         }
 
         ViewInteraction appCompatEditText2 = onView(
-                allOf(withId(R.id.editText2),
+                allOf(withId(R.id.email),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -92,7 +92,7 @@ public class MainActivityTest {
         appCompatEditText2.perform(replaceText("swalker@gmail.com"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText3 = onView(
-                allOf(withId(R.id.editText3),
+                allOf(withId(R.id.name),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -102,7 +102,7 @@ public class MainActivityTest {
         appCompatEditText3.perform(replaceText("Stephanie Walker"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText4 = onView(
-                allOf(withId(R.id.editText4),
+                allOf(withId(R.id.password),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -112,7 +112,7 @@ public class MainActivityTest {
         appCompatEditText4.perform(replaceText("123456"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText5 = onView(
-                allOf(withId(R.id.editText5),
+                allOf(withId(R.id.age),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -122,7 +122,7 @@ public class MainActivityTest {
         appCompatEditText5.perform(replaceText("23"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText6 = onView(
-                allOf(withId(R.id.editText6),
+                allOf(withId(R.id.occupation),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -144,7 +144,7 @@ public class MainActivityTest {
         // Added a sleep statement to match the app's execution delay.
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
-        try {
+        /*try {
             Thread.sleep(300);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -158,7 +158,7 @@ public class MainActivityTest {
                                         0),
                                 1),
                         isDisplayed()));
-        appCompatEditText7.perform(replaceText("I'm a thinker and a dreamer"), closeSoftKeyboard());
+        appCompatEditText7.perform(replaceText("I'm a thinker and a dreamer"), closeSoftKeyboard());*/
 
     }
 
