@@ -84,6 +84,5 @@ public class SignUpActivity extends AppCompatActivity {
         intent.putExtra(Constants.AGE, age);
         intent.putExtra(Constants.NAME, name);
         startActivity(intent);
-        
     }
 }
