@@ -9,7 +9,7 @@
     <string name="enter_your_phone_number">Enter Your Phone Number</string>
     <string name="enter_your_age">Enter Your Age</string>
     <string name="about_me">About Me</string>
-    <string name="Description">Please give a description</string>
+    <string name="Description">Please give a brief description about yourself</string>
     <string name="enter_your_occupation">Enter Your Occupation</string>
     <string name="name_and_occupation">TextView</string>
     <string name="tinder_like_logo">tinder-like-logo</string>
