@@ -31,7 +31,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="About Me: "
+        android:text="@string/app_name"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +95,8 @@
             android:checked="true"
             android:drawableStart="@drawable/men_512"
             android:shadowColor="@color/colorPrimaryDark"
-            android:text="@string/male"></RadioButton>
+            android:text="@string/male">
+        </RadioButton>
 
 
         <RadioButton
@@ -105,7 +106,8 @@
             android:layout_weight="1"
             android:drawableStart="@drawable/women_512"
             android:shadowColor="@color/colorPrimaryDark"
-            android:text="@string/female"></RadioButton>
+            android:text="@string/female">
+        </RadioButton>
     </RadioGroup>
 
     <TextView

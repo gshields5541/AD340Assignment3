@@ -19,7 +19,7 @@ public class MultiTabActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multi_tab);
         tabLayout = findViewById(R.id.tabLayout_id);
-        appBarLayout = findViewById(R.id.appbarid);
+        appBarLayout = findViewById(R.id.appbar_id);
         viewPager = findViewById(R.id.viewpager_id);
         ViewerPagerAdapter adapter = new ViewerPagerAdapter(getSupportFragmentManager());
 
