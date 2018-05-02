@@ -5,8 +5,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
+
 
 public class MultiTabActivity extends AppCompatActivity {
 
@@ -25,9 +24,9 @@ public class MultiTabActivity extends AppCompatActivity {
         ViewerPagerAdapter adapter = new ViewerPagerAdapter(getSupportFragmentManager());
 
         //Adding Fragments
-        adapter.AddFragment(new Fragment(), "Profile");
-        adapter.AddFragment(new Fragment(), "Matches");
-        adapter.AddFragment(new Fragment(), "Settings");
+        adapter.AddFragment(new FragmentProfile(), "Profile");
+        adapter.AddFragment(new FragmentMatches(), "Matches");
+        adapter.AddFragment(new FragmentSettings(), "Settings");
 
         //adapter Setup
         viewPager.setAdapter(adapter);
