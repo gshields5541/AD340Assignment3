@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/back"
     tools:context="com.example.tinderlike.LoginActivity">
-
-
+    
     <EditText
         android:id="@+id/email"
         android:layout_width="358dp"
