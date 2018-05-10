@@ -134,7 +134,7 @@ public class MainActivityTest {
         ViewInteraction tabView = onView(
                 allOf(childAtPosition(
                         childAtPosition(
-                                withId(R.id.tabLayout_id),
+                                withId(R.id.tabs),
                                 0),
                         1),
                         isDisplayed()));
@@ -143,7 +143,7 @@ public class MainActivityTest {
         ViewInteraction tabView2 = onView(
                 allOf(childAtPosition(
                         childAtPosition(
-                                withId(R.id.tabLayout_id),
+                                withId(R.id.tabs),
                                 0),
                         2),
                         isDisplayed()));

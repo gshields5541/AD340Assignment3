@@ -185,7 +185,7 @@ public class MainActivityLandscapeTest {
         ViewInteraction tabView = onView(
                 allOf(childAtPosition(
                         childAtPosition(
-                                withId(R.id.tabLayout_id),
+                                withId(R.id.tabs),
                                 0),
                         1),
                         isDisplayed()));
@@ -194,7 +194,7 @@ public class MainActivityLandscapeTest {
         ViewInteraction tabView2 = onView(
                 allOf(childAtPosition(
                         childAtPosition(
-                                withId(R.id.tabLayout_id),
+                                withId(R.id.tabs),
                                 0),
                         2),
                         isDisplayed()));
@@ -203,7 +203,7 @@ public class MainActivityLandscapeTest {
         ViewInteraction tabView3 = onView(
                 allOf(childAtPosition(
                         childAtPosition(
-                                withId(R.id.tabLayout_id),
+                                withId(R.id.tabs),
                                 0),
                         0),
                         isDisplayed()));
