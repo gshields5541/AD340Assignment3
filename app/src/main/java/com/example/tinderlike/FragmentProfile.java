@@ -26,6 +26,7 @@ public class FragmentProfile extends Fragment {
         nameTextView = view.findViewById(R.id.name);
         ageTextView = view.findViewById(R.id.age);
 
+
         Bundle Extra = getActivity().getIntent().getExtras();
         if(Extra != null) {
             String name = Extra.getString(Constants.NAME);
