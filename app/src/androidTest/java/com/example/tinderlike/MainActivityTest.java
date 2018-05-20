@@ -121,38 +121,23 @@ public class MainActivityTest {
                         isDisplayed()));
         tabView.perform(click());
 
-        pressBack();
-
-        ViewInteraction appCompatImageButton = onView(
-                allOf(withId(R.id.favorite_button),
+        ViewInteraction tabView2 = onView(
+                allOf(childAtPosition(
                         childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.matchesFrag),
-                                        0),
-                                3),
+                                withId(R.id.tabs),
+                                0),
+                        2),
                         isDisplayed()));
-        appCompatImageButton.perform(click());
+        tabView2.perform(click());
 
-        ViewInteraction appCompatImageButton2 = onView(
-                allOf(withId(R.id.favorite_button),
+        ViewInteraction tabView3 = onView(
+                allOf(childAtPosition(
                         childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.matchesFrag),
-                                        0),
-                                3),
+                                withId(R.id.tabs),
+                                0),
+                        1),
                         isDisplayed()));
-        appCompatImageButton2.perform(click());
-
-        ViewInteraction appCompatImageButton3 = onView(
-                allOf(withId(R.id.favorite_button),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.matchesFrag),
-                                        0),
-                                3),
-                        isDisplayed()));
-        appCompatImageButton3.perform(click());
-
+        tabView3.perform(click());
     }
 
     private static Matcher<View> childAtPosition(
