@@ -138,6 +138,20 @@ public class MainActivityTest {
                         1),
                         isDisplayed()));
         tabView3.perform(click());
+
+        pressBack();
+
+        ViewInteraction appCompatImageButton = onView(
+                allOf(withId(R.id.favorite_button),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(R.id.matchesFrag),
+                                        0),
+                                3),
+                        isDisplayed()));
+        appCompatImageButton.perform(click());
+
+
     }
 
     private static Matcher<View> childAtPosition(
