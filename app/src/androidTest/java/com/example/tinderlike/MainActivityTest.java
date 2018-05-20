@@ -17,6 +17,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.Espresso.pressBack;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static android.support.test.espresso.action.ViewActions.replaceText;
@@ -70,7 +71,17 @@ public class MainActivityTest {
                                         0),
                                 0),
                         isDisplayed()));
-        appCompatEditText.perform(replaceText("jeanb@gmail.com"), closeSoftKeyboard());
+        appCompatEditText.perform(click());
+
+        ViewInteraction appCompatEditText2 = onView(
+                allOf(withId(R.id.email),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                0),
+                        isDisplayed()));
+        appCompatEditText2.perform(replaceText("jeanb@gmail.com"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText3 = onView(
                 allOf(withId(R.id.password),
@@ -109,6 +120,38 @@ public class MainActivityTest {
                         1),
                         isDisplayed()));
         tabView.perform(click());
+
+        pressBack();
+
+        ViewInteraction appCompatImageButton = onView(
+                allOf(withId(R.id.favorite_button),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(R.id.matchesFrag),
+                                        0),
+                                3),
+                        isDisplayed()));
+        appCompatImageButton.perform(click());
+
+        ViewInteraction appCompatImageButton2 = onView(
+                allOf(withId(R.id.favorite_button),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(R.id.matchesFrag),
+                                        0),
+                                3),
+                        isDisplayed()));
+        appCompatImageButton2.perform(click());
+
+        ViewInteraction appCompatImageButton3 = onView(
+                allOf(withId(R.id.favorite_button),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(R.id.matchesFrag),
+                                        0),
+                                3),
+                        isDisplayed()));
+        appCompatImageButton3.perform(click());
 
     }
 
