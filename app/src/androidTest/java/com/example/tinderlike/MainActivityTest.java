@@ -16,6 +16,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.isClickable;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.Espresso.pressBack;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -121,6 +123,7 @@ public class MainActivityTest {
                         isDisplayed()));
         tabView.perform(click());
 
+
         ViewInteraction tabView2 = onView(
                 allOf(childAtPosition(
                         childAtPosition(
@@ -139,7 +142,16 @@ public class MainActivityTest {
                         isDisplayed()));
         tabView3.perform(click());
 
-        pressBack();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void buttonIsClickable() {
+        onView(withId(R.id.favorite_button)).check(matches(isClickable()));
     }
 
     private static Matcher<View> childAtPosition(
