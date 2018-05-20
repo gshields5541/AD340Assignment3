@@ -44,6 +44,7 @@ public class MainActivityTest {
             e.printStackTrace();
         }
 
+        
         ViewInteraction appCompatButton = onView(
                 allOf(withId(R.id.signIn), withText("Sign In"),
                         childAtPosition(
