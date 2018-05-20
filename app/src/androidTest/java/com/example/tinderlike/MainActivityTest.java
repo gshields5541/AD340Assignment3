@@ -17,6 +17,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.Espresso.pressBack;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static android.support.test.espresso.action.ViewActions.replaceText;
@@ -38,18 +39,18 @@ public class MainActivityTest {
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
-            Thread.sleep(300);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         ViewInteraction appCompatButton = onView(
-                allOf(withId(R.id.signUp), withText("Sign Up"),
+                allOf(withId(R.id.signIn), withText("Sign In"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
                                         0),
-                                0),
+                                1),
                         isDisplayed()));
         appCompatButton.perform(click());
 
@@ -57,7 +58,7 @@ public class MainActivityTest {
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
-            Thread.sleep(300);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -70,17 +71,17 @@ public class MainActivityTest {
                                         0),
                                 0),
                         isDisplayed()));
-        appCompatEditText.perform(replaceText("gshieldssea5541@gmail.com"), closeSoftKeyboard());
+        appCompatEditText.perform(click());
 
         ViewInteraction appCompatEditText2 = onView(
-                allOf(withId(R.id.name),
+                allOf(withId(R.id.email),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
                                         0),
-                                1),
+                                0),
                         isDisplayed()));
-        appCompatEditText2.perform(replaceText("Gerald Shields"), closeSoftKeyboard());
+        appCompatEditText2.perform(replaceText("jeanb@gmail.com"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText3 = onView(
                 allOf(withId(R.id.password),
@@ -88,45 +89,37 @@ public class MainActivityTest {
                                 childAtPosition(
                                         withId(android.R.id.content),
                                         0),
-                                2),
+                                1),
                         isDisplayed()));
-        appCompatEditText3.perform(replaceText("12345"), closeSoftKeyboard());
-
-        ViewInteraction appCompatEditText4 = onView(
-                allOf(withId(R.id.age),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                3),
-                        isDisplayed()));
-        appCompatEditText4.perform(replaceText("50"), closeSoftKeyboard());
-
-        ViewInteraction appCompatEditText5 = onView(
-                allOf(withId(R.id.occupation),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                4),
-                        isDisplayed()));
-        appCompatEditText5.perform(replaceText("Programmer"), closeSoftKeyboard());
+        appCompatEditText3.perform(replaceText("123456"), closeSoftKeyboard());
 
         ViewInteraction appCompatButton2 = onView(
-                allOf(withId(R.id.button), withText("Log In"),
+                allOf(withId(R.id.button), withText("Sign In"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
                                         0),
-                                5),
+                                2),
                         isDisplayed()));
         appCompatButton2.perform(click());
+
+        pressBack();
+
+        ViewInteraction appCompatButton3 = onView(
+                allOf(withId(R.id.button), withText("Sign In"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                2),
+                        isDisplayed()));
+        appCompatButton3.perform(click());
 
         // Added a sleep statement to match the app's execution delay.
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
-            Thread.sleep(300);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -140,14 +133,27 @@ public class MainActivityTest {
                         isDisplayed()));
         tabView.perform(click());
 
-        ViewInteraction tabView2 = onView(
-                allOf(childAtPosition(
+        pressBack();
+
+        ViewInteraction appCompatImageButton = onView(
+                allOf(withId(R.id.favorite_button),
                         childAtPosition(
-                                withId(R.id.tabs),
-                                0),
-                        2),
+                                childAtPosition(
+                                        withId(R.id.matchesFrag),
+                                        0),
+                                3),
                         isDisplayed()));
-        tabView2.perform(click());
+        appCompatImageButton.perform(click());
+
+        ViewInteraction appCompatImageButton2 = onView(
+                allOf(withId(R.id.favorite_button),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(R.id.matchesFrag),
+                                        0),
+                                3),
+                        isDisplayed()));
+        appCompatImageButton2.perform(click());
 
     }
 

@@ -12,16 +12,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TableLayout;
 
+import com.example.tinderlike.models.Matches;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class MultiTabActivity extends AppCompatActivity {
+public class MultiTabActivity extends AppCompatActivity implements FragmentMatches.OnListFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multi_tab);
+
 
         // Adding Toolbar to Main screen
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -40,6 +43,11 @@ public class MultiTabActivity extends AppCompatActivity {
         adapter.addFragment(new FragmentMatches(), "Matches");
         adapter.addFragment(new FragmentSettings(), "Settings");
         viewPager.setAdapter(adapter);
+    }
+
+    @Override
+    public void onListFragmentInteraction(Matches item) {
+
     }
 
     static class Adapter extends FragmentPagerAdapter {

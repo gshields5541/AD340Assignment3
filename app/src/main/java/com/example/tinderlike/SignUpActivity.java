@@ -8,12 +8,18 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.support.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 
 public class SignUpActivity extends AppCompatActivity {
 
-
+    FirebaseAuth auth;
     ProgressDialog dialog;
     EditText e1_mail, e2_name, e3_password, e4_age, e5_occupation;
 
@@ -21,7 +27,7 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
+        auth = FirebaseAuth.getInstance();
         dialog = new ProgressDialog(this);
 
 
@@ -76,13 +82,24 @@ public class SignUpActivity extends AppCompatActivity {
     {
         dialog.setMessage("Registering. . . please wait!!!");
         dialog.show();
-        dialog.dismiss();
-        Toast.makeText(getApplicationContext(), "You have registered successfully", Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(SignUpActivity.this, MultiTabActivity.class);
-        int age = Integer.valueOf(e4_age.getText().toString());
-        String name = e2_name.getText().toString();
-        intent.putExtra(Constants.AGE, age);
-        intent.putExtra(Constants.NAME, name);
-        startActivity(intent);
+
+        auth.createUserWithEmailAndPassword(e1_mail.getText().toString(), e3_password.getText().toString())
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful())
+                    {
+                        dialog.dismiss();
+                        Toast.makeText(getApplicationContext(), "You have registered successfully", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(SignUpActivity.this, MultiTabActivity.class);
+                        int age = Integer.valueOf(e4_age.getText().toString());
+                        String name = e2_name.getText().toString();
+                        intent.putExtra(Constants.AGE, age);
+                        intent.putExtra(Constants.NAME, name);
+                        startActivity(intent);
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(), "You could not be registered", Toast.LENGTH_LONG).show();
+                    }
+                });
     }
 }
