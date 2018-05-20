@@ -44,7 +44,6 @@ public class MainActivityTest {
             e.printStackTrace();
         }
 
-
         ViewInteraction appCompatButton = onView(
                 allOf(withId(R.id.signIn), withText("Sign In"),
                         childAtPosition(
@@ -141,18 +140,6 @@ public class MainActivityTest {
         tabView3.perform(click());
 
         pressBack();
-
-        ViewInteraction appCompatImageButton = onView(
-                allOf(withId(R.id.favorite_button),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.matchesFrag),
-                                        0),
-                                3),
-                        isDisplayed()));
-        appCompatImageButton.perform(click());
-
-
     }
 
     private static Matcher<View> childAtPosition(
