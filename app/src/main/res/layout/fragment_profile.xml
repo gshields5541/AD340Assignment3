@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:elevation="2dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif"
+            android:text="@string/marian_hart"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="42dp"
+            android:text="@string/age" />
+
+
+        <TextView
+            android:id="@+id/occupation"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="69dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:lines="2"
+            android:text="@string/director_of_project_management_at_goldenphase_solar"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/education"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/syracuse_university_new_york"
+            android:textSize="16sp" />
+
+        <Space
+            android:id="@+id/spaceHolder"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:layout_below="@id/education"
+            android:layout_centerHorizontal="true" />
+
+
+        <TextView
+            android:id="@+id/summary"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="64dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:lines="2"
+            android:text="@string/i_m_a_renewable_energy_executive_with_10_years_of_experience_and_have_built_strong_skills_in_getting_companies"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
 
     <Button
@@ -32,7 +32,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="260dp"
         android:onClick="click_sign_in"
-        android:text="@string/sign_In"
+        android:text="@string/sign_in"
         android:background="@drawable/my_shape"
         android:textSize="12sp"
         android:textColor="#FFF"
